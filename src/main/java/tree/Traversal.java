@@ -130,7 +130,7 @@ public class Traversal {
                 root = root.left;
             }
             root = stack.pop();
-            // 区分是否需要遍历右子树，如果不存在右子树，或者上次访问的即为右子树，则不需要遍历右子树。
+            // 区分是否需要遍历右子树，如果不存在右子树，或者上次访问的即为右子树，则不需要遍历右子树。处理根节点即可
             if (root.right == null || root.right == preNode) {
                 result.add(root.val);
                 preNode = root;
