@@ -104,6 +104,41 @@ public class Traversal {
     }
 
     /**
+     * 中序遍历-标记法
+     * 思想：将有限要返回的节点标记，只要标记了才先返回
+     *
+     * @param root
+     * @return
+     */
+    public static List<Integer> midOrderTraversalByMarkWay(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if (root != null) {
+            stack.push(root);
+        }
+        while (!stack.isEmpty()) {
+            TreeNode stackTop = stack.peek();
+            if (stackTop != null) {
+                stack.pop();
+                if (stackTop.right != null) {
+                    stack.push(stackTop.right);
+                }
+                stack.push(stackTop);
+                stack.push(null);
+                if (stackTop.left != null) {
+                    stack.push(stackTop.left);
+                }
+            } else {
+                TreeNode markEle = stack.pop();
+                TreeNode needAddNode = stack.pop();
+                result.add(needAddNode.val);
+            }
+        }
+        return result;
+    }
+
+
+    /**
      * 后序遍历-递归
      *
      * @param root
@@ -157,7 +192,7 @@ public class Traversal {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
-        List<Integer> result = midOrderTraversalIter(root);
+        List<Integer> result = midOrderTraversalByMarkWay(root);
 
     }
 }
