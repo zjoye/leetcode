@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * https://leetcode.cn/problems/binary-tree-level-order-traversal/
  */
-public class LevelOrDerTraversalTree {
+public class LevelOrderTraversalTree {
     public List<List<Integer>> levelOrder(TreeNode root) {
         // 队列用于确保层序
         Queue<TreeNode> queue = new LinkedList<>();
