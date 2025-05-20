@@ -9,7 +9,7 @@ public class RemoveNthFromEnd {
         if (head == null || n == 0) {
             return head;
         }
-        ListNode dummyHead = new ListNode(-1);
+        ListNode dummyHead = new ListNode(-1, null);
         dummyHead.next = head;
         ListNode fastNode = dummyHead;
         ListNode slowNode = dummyHead;
