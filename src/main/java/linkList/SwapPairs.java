@@ -8,7 +8,7 @@ public class SwapPairs {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode dummyHead = new ListNode(-1);
+        ListNode dummyHead = new ListNode(-1, null);
         dummyHead.next = head;
         ListNode tempNode = dummyHead;
         while (tempNode.next != null && tempNode.next.next != null) {

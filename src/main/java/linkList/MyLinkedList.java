@@ -12,7 +12,7 @@ public class MyLinkedList {
     public MyLinkedList() {
         this.size = 0;
         // 虚拟头结点
-        this.head = new ListNode(-1);
+        this.head = new ListNode(-1, null);
     }
 
     public int get(int index) {
@@ -45,7 +45,7 @@ public class MyLinkedList {
         for (int i = 0; i < index; i++) {
             pre = pre.next;
         }
-        ListNode addNode = new ListNode(val);
+        ListNode addNode = new ListNode(val, null);
         addNode.next = pre.next;
         pre.next = addNode;
     }

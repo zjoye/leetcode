@@ -15,7 +15,7 @@ public class RemoveElement {
 
 
     public static void main(String[] args) {
-        ListNode head = new ListNode();
+        ListNode head = new ListNode(-1, null);
         head.val = 1;
         head.next = new ListNode(2, new ListNode(6, new ListNode(3, new ListNode(4, new ListNode(5, new ListNode(6, null))))));
         ListNode listNode = removeElements(head, 6);
