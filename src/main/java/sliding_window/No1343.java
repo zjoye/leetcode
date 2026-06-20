@@ -1,5 +1,8 @@
 package sliding_window;
 
+/**
+ * <a href="https://leetcode.cn/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/description/">Leetcode Link</a>
+ */
 public class No1343 {
 
     public static int numOfSubarrays(int[] arr, int k, int threshold) {

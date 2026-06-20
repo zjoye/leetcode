@@ -2,6 +2,9 @@ package sliding_window;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.cn/problems/k-radius-subarray-averages/">Lettcode Link</a>
+ */
 public class No2090 {
     public static int[] getAverages(int[] nums, int k) {
         int[] result = new int[nums.length];
